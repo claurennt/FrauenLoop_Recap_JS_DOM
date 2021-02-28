@@ -12,3 +12,8 @@ To solve this, you need to do following:
 
 
 - Try out: change the styling of your page using Dom-Manipulation. For this you can add another button and when you click on it, the style changes. For this you need to look into how to change (toggle) classes on an element using JS. 
+
+1. Create some styling in a css-file
+2. Add a button to click on to change the style
+3. Add an event listener to the button 
+4. In the callback function of the eventlistener, add (or remove) the class with styling to the element which should change styling.

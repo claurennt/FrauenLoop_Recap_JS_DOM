@@ -1,0 +1,41 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Change the style",
+  "steps": [
+    {
+      "file": "style.css",
+      "description": "### Add some style\n\nHere I add a class with some style for the background color and the text color. The element with this style will have a dark background and bright text."
+    },
+    {
+      "file": "index.html",
+      "description": "### Link the style sheet\n\nHere we link to the style sheet we created in the previous step. ",
+      "line": 7
+    },
+    {
+      "file": "index.html",
+      "description": "### Button to change style\n\nHere we add a button. When we click on it, the style of the page should change from the default unstyled page to the dark style.",
+      "line": 12,
+      "selection": {
+        "start": {
+          "line": 12,
+          "character": 17
+        },
+        "end": {
+          "line": 12,
+          "character": 28
+        }
+      }
+    },
+    {
+      "file": "script.js",
+      "description": "### Add event listener\n\nFirst, we grab the button with the id `changeStyle`.\nThen we add an event listener to the button. It listens for a click and will call the function `changeStyleOnClick`. \n\n*Sidenote*: \n\nNotice how this function is passed as a second argument to the `addEventListener`-method. Since we are not passing any arguments, we don't need to write `() => changeStyleOnClick()`, but just refer to the function by its name. This is different from the event listener in line 85 where we add a callback function and call the `calculateSum` function with a parameter from within the callback function. ",
+      "line": 92
+    },
+    {
+      "file": "script.js",
+      "description": "### Change the style\n\nIn this function we first grab the element on which we want to change the style. \nIn line 90 we use the property `classList`, which gives us acces to the classes on the element. The method `toggle` checks if the element already has this class, and if not, it adds the class. If the class is already present on the element, it removes the class. This method is usefull, when we want to switch (toggle) between styles on each click. \n\nOther methods that we can use to change the styling of an element only one time (not switching back and forth) are `add` which only adds a class, and `remove` which only removes a class. ",
+      "line": 88
+    }
+  ],
+  "ref": "domExercises"
+}

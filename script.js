@@ -83,3 +83,11 @@ const calculateSum = (anArray) => {
 
 let button = document.querySelector('#sum')
 button.addEventListener('click', () => calculateSum(myNumbers))
+
+// Styling:
+const changeStyleOnClick = () => {
+  let page = document.querySelector('.container')
+  page.classList.toggle('darkMode')
+}
+let styleButton = document.querySelector('#changeStyle')
+styleButton.addEventListener('click', changeStyleOnClick)
