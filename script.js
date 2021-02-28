@@ -18,7 +18,7 @@ week.forEach(day => {
 
 // more generall loop: for-loop. This loop can be used to loop through Arrays, but also to repeat any code multiple times!
 for (let i = 100; i >= 10; i--){
-  console.log('index', i);
+  // console.log('index', i);
 }
 
 // Two styles of functions: For now, you can use the one you like most!
@@ -42,7 +42,7 @@ for (item of myNumbers) {
   // set innerText of list item
   listItem.innerText = item
   // where do we put it?
-  let list = document.getElementsByClassName('numbers')
+  let list = document.getElementsByClassName('myNumbers')
   list[0].append(listItem)
 }
 // here we do the same thig, display numbers, but use a different loop, just because we can!
@@ -51,7 +51,7 @@ let myLuckyNumbers = [3,7,11,15,21,33]
 for (let index = 0; index < myLuckyNumbers.length ; index++){
   let listItem = document.createElement('li')
   listItem.innerText = myLuckyNumbers[index]
-  let list = document.getElementsByClassName('numbers')
+  let list = document.getElementsByClassName('luckyNumbers')
   list[0].append(listItem)
 }
 
@@ -75,12 +75,11 @@ const calculateSum = (anArray) => {
   let sum = 0;
   for (number of anArray) {
     sum += number
+    console.log("sum in the loop:", sum);
   }
-  return sum
+  // find target for text: 
+  document.querySelector('.sumDisplay').innerText = ` This is the sum: ${sum}`
 }
-// store the return value of the function, because we want to use it later in line 85:
-let resultMyNumber = calculateSum(myNumbers)
 
-// find target for text: 
-document.querySelector('.sum').innerText = ` This is the sum: ${resultMyNumber}`
-
+let button = document.querySelector('#sum')
+button.addEventListener('click', () => calculateSum(myNumbers))

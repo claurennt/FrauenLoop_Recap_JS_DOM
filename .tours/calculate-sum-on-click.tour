@@ -1,0 +1,22 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Calculate Sum on Click",
+  "steps": [
+    {
+      "file": "index.html",
+      "description": "### Add Button\n\nFirst we need a button to click on. Here it is added in the Html-file and I give it an id `sum`, which I will use to pick up the element in the script-file. ",
+      "line": 15
+    },
+    {
+      "file": "script.js",
+      "description": "### Add event listener to the Button\nFirst, we grab the button we created in the previous step. \nThen, we add an event listener to the button. It will listen for a click, and when the button is clicked, the function `calculateSum` will be called with the array `myNumbers` as a parameter. ",
+      "line": 85
+    },
+    {
+      "file": "script.js",
+      "description": "### Calculate the sum\n\nThis function expects an array of numbers as a parameter and will calculate the sum of these numbers. In the first line of the function body, we declare a variable `sum`. This will be our \"memory\" as we count. \n\nIn the `for of` loop we go through each number in the array and add the number to the variable `sum`. If you have a look at the console, you can see how the value of `sum` increases for each loop. \n\nWhen the loop finishes, we grap the \\<p\\>-tag with the class name `sumDisplay` and changes the text in this tag to include the `sum` we calculated.\n\n That's it, now if we click the button, we see the sum displayed on the page!",
+      "line": 74
+    }
+  ],
+  "ref": "domExercises"
+}
