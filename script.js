@@ -82,15 +82,15 @@ const calculateSum = (anArray) => {
 let resultMyNumber = calculateSum(myNumbers)
 
 //function to change button style and text
-const changeButtonStyle = () => {
-  document.getElementById("myButton").classList.toggle("styledButton");
+const changePageStyle = () => {
+  document.querySelector("div").classList.toggle("styledPage");
   document.getElementById("myButton").innerHTML ="<h3><strong>Calculated!</strong></h3>";
 }
 
 //ADD Event listener to trigger sum display and button styling
 document.querySelector("button").addEventListener("click", () => {
   document.querySelector('.sum').innerHTML = `This is the sum: <h2> <em> ${resultMyNumber}</em> </h2>`;
-  changeButtonStyle();
+  changePageStyle();
 })
 
 
