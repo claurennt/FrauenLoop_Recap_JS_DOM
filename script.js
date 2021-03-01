@@ -3,7 +3,7 @@
 let week = ['Monday', 'Tuesday', 'Wednesday']
 
 let people = ['Ann', 'Bert', 'Claus', 'David', 'Emma']
-// for -of is a loop we can use only on arrays. 
+// for -of is a loop we can use only on arrays.
 for (day of week) {
   console.log(day);
 }
@@ -27,7 +27,7 @@ function myOldFunction () {
 }
 
 const myNewFunction = () => {
-  return "Hi! I'm modern!" 
+  return "Hi! I'm modern!"
 }
 // Both functions return something, i.e. they have a output. If we want to use the output of the function, we store it in a variable when we call the function:
 let result = myNewFunction(10,10,30)
@@ -81,6 +81,17 @@ const calculateSum = (anArray) => {
 // store the return value of the function, because we want to use it later in line 85:
 let resultMyNumber = calculateSum(myNumbers)
 
-// find target for text: 
-document.querySelector('.sum').innerText = ` This is the sum: ${resultMyNumber}`
+//function
+const changeButtonStyle = () => {
+  document.getElementById("myButton").classList.toggle("styledButton");
+  document.getElementById("myButton").innerHTML ="<h3><strong>Calculated!</strong></h3>";
+}
 
+document.querySelector("button").addEventListener("click", () => {
+  document.querySelector('.sum').innerHTML = `This is the sum: <h2> <em> ${resultMyNumber}</em> </h2>`;
+  changeButtonStyle();
+})
+
+
+// find target for text:
+// document.querySelector('.sum').innerText = ` This is the sum: ${resultMyNumber}`
